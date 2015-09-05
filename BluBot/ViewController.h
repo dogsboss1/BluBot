@@ -23,7 +23,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tbDevices;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *SearchIndicator;
-@property (strong, nonatomic) IBOutlet UITableViewCell *cellDevices;
 
 - (IBAction)actionSearch:(id)sender;
 - (IBAction)actionReturn:(id)sender;

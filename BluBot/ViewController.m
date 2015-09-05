@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "devicesListTableViewCell.h"
 
 @interface ViewController ()
 
@@ -136,8 +137,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *MyIdentifier = @"ScanDeviceCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    devicesListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
+    DFBlunoDevice* peripheral   = [self.aryDevices objectAtIndex:indexPath.row];
+    
+    cell.bleNameLabel.text = peripheral.name;
+    cell.serviceIDLabel.text = peripheral.identifier;
+    
+    /*
     if (cell == nil)
     {
         if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
@@ -150,14 +157,15 @@
         }
         
         cell = self.cellDevices;
-    }
-    
+    }*/
+    /*
     UILabel* lbName             = (UILabel*)[cell viewWithTag:1];
     UILabel* lbUUID             = (UILabel*)[cell viewWithTag:2];
-    DFBlunoDevice* peripheral   = [self.aryDevices objectAtIndex:indexPath.row];
     
+    DFBlunoDevice* peripheral   = [self.aryDevices objectAtIndex:indexPath.row];
+
     lbName.text = peripheral.name;
-    lbUUID.text = peripheral.identifier;
+    lbUUID.text = peripheral.identifier;*/
     
     return cell;
     

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -76,38 +77,58 @@
                                         <rect key="frame" x="8" y="37" width="584" height="527"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="117" id="6Gx-Q8-vvg">
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScanDeviceCell" rowHeight="117" id="6Gx-Q8-vvg" customClass="devicesListTableViewCell">
                                                 <rect key="frame" x="0.0" y="0.0" width="584" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Gx-Q8-vvg" id="eiO-fd-0uJ">
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXZ-su-xfP">
-                                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ble Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXZ-su-xfP">
+                                                            <rect key="frame" x="8" y="8" width="80" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-yu-AbQ">
-                                                            <rect key="frame" x="8" y="37" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozk-yu-AbQ">
+                                                            <rect key="frame" x="8" y="37" width="204" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="204" id="qcI-UN-Z6v"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-cs-R8V">
-                                                            <rect key="frame" x="8" y="66" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UUID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wfh-cs-R8V">
+                                                            <rect key="frame" x="8" y="66" width="46" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-lW-R8H">
-                                                            <rect key="frame" x="8" y="95" width="42" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgM-lW-R8H">
+                                                            <rect key="frame" x="8" y="95" width="254" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="254" id="d6Z-xz-F9q"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Wfh-cs-R8V" firstAttribute="top" secondItem="ozk-yu-AbQ" secondAttribute="bottom" constant="8" symbolic="YES" id="2da-6g-UOI"/>
+                                                        <constraint firstItem="jgM-lW-R8H" firstAttribute="top" secondItem="Wfh-cs-R8V" secondAttribute="bottom" constant="8" symbolic="YES" id="3MS-Yu-eua"/>
+                                                        <constraint firstItem="OXZ-su-xfP" firstAttribute="leading" secondItem="ozk-yu-AbQ" secondAttribute="leading" id="79k-9H-Wtb"/>
+                                                        <constraint firstItem="ozk-yu-AbQ" firstAttribute="top" secondItem="OXZ-su-xfP" secondAttribute="bottom" constant="8" symbolic="YES" id="KZI-B1-ESc"/>
+                                                        <constraint firstItem="OXZ-su-xfP" firstAttribute="leading" secondItem="eiO-fd-0uJ" secondAttribute="leadingMargin" id="aPz-Y0-XQe"/>
+                                                        <constraint firstItem="OXZ-su-xfP" firstAttribute="leading" secondItem="Wfh-cs-R8V" secondAttribute="leading" id="f98-bY-wLk"/>
+                                                        <constraint firstItem="OXZ-su-xfP" firstAttribute="top" secondItem="eiO-fd-0uJ" secondAttribute="topMargin" id="qMZ-Um-8hR"/>
+                                                        <constraint firstItem="OXZ-su-xfP" firstAttribute="leading" secondItem="jgM-lW-R8H" secondAttribute="leading" id="yI6-s9-VZt"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="bleNameLabel" destination="ozk-yu-AbQ" id="DEi-On-DQV"/>
+                                                    <outlet property="serviceIDLabel" destination="jgM-lW-R8H" id="tYf-R9-GGx"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -128,7 +149,6 @@
                     </view>
                     <connections>
                         <outlet property="SearchIndicator" destination="x08-zj-YPd" id="aJK-8c-dbl"/>
-                        <outlet property="cellDevices" destination="6Gx-Q8-vvg" id="Yx0-jO-qwl"/>
                         <outlet property="lbReady" destination="oUq-dF-1h0" id="Gj3-Rb-cms"/>
                         <outlet property="lbReceivedMsg" destination="5cJ-1z-lsc" id="GNC-eo-R4s"/>
                         <outlet property="tbDevices" destination="dDa-pS-LH6" id="6zd-S3-Oyh"/>
